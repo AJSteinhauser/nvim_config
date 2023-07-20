@@ -5,7 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+
       require("toggleterm").setup()
   end}
   use { 'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
@@ -29,14 +32,6 @@ return require('packer').startup(function(use)
 	  end
   })
   use('ThePrimeagen/vim-be-good')
-  use({
-      "windwp/nvim-autopairs",
-      wants = "nvim-treesitter",
-      module = { "nvim-autopairs.completion.cmp", "nvim-autopairs" },
-      config = function()
-          require("config.autopairs").setup()
-      end,
-  })
 
 
   use({"neoclide/coc.nvim", branch = "release"})
