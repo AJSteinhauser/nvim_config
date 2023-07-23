@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use('folke/trouble.nvim')
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
-
   use { 'joeveiga/ng.nvim'}
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
