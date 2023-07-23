@@ -31,3 +31,8 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 --Copy into system register 
 vim.keymap.set("n", "<leader>+", "\"+y")
 
+--Window movement
+vim.cmd[[tnoremap <C-w>h <C-\><C-n><C-w>h]]
+vim.cmd[[tnoremap <C-w>l <C-\><C-n><C-w>l]]
+vim.cmd[[tnoremap <C-w>j <C-\><C-n><C-w>j]]
+vim.cmd[[tnoremap <C-w>k <C-\><C-n><C-w>k]]

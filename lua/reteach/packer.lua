@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
 
       require("toggleterm").setup()
   end}
-  use { 'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use('folke/trouble.nvim')
@@ -32,9 +31,6 @@ return require('packer').startup(function(use)
 	  end
   })
   use('ThePrimeagen/vim-be-good')
-
-
-  use({"neoclide/coc.nvim", branch = "release"})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -63,5 +59,5 @@ return require('packer').startup(function(use)
 use{'lambdalisue/fern.vim'}
 use{'hrsh7th/cmp-cmdline'}
 
-use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
