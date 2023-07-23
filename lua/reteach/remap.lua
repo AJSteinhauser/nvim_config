@@ -28,6 +28,6 @@ vim.keymap.set("n", "<leader>T", ":TroubleClose<enter>")
 vim.keymap.set("n", "x", "\"_x")
 vim.keymap.set("n", "<leader>d", "\"_d")
 
-
-
+--Copy into system register 
+vim.keymap.set("n", "<leader>+", "\"+y")
 
