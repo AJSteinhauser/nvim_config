@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use({ 
 	  'rose-pine/neovim',
 	  as = 'rose-pine', 
@@ -35,6 +35,9 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use{'sjl/vitality.vim'}
   use('tpope/vim-fugitive')
+  use{'lambdalisue/fern.vim'}
+  use{'hrsh7th/cmp-cmdline'}
+  use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
@@ -44,7 +47,7 @@ return require('packer').startup(function(use)
           {                                      -- Optional
           'williamboman/mason.nvim',
           run = function()
-              pcall(vim.cmd, 'MasonUpdate')
+              pcall(vim.api.nvim_command, 'MasonUpdate')
           end,
       },
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -55,8 +58,4 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
-use{'lambdalisue/fern.vim'}
-use{'hrsh7th/cmp-cmdline'}
-
-use({"iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
