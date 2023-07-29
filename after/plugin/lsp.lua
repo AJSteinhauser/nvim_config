@@ -63,13 +63,13 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-
 vim.diagnostic.config({
     virtual_text = true
 })
 
+
 require("lspconfig").lua_ls.setup({
-    cmd = {"lua-language-server", "-E", os.getenv( "HOME" ) .. "/.config/nvim/robloxSpecific/lsp/server/main.lua"}
+    cmd = {"lua-language-server", "-E", os.getenv("HOME") .. "/.config/nvim/robloxSpecific/lsp/server/main.lua"}
 })
 
 lsp.setup()
