@@ -1,7 +1,7 @@
 require("reteach.remap")
 require("reteach.set")
 
-vim.cmd[[autocmd BufLeave,FocusLost * silent! wall]]
+--vim.cmd[[autocmd BufLeave,FocusLost * silent! wall]]
 
 
 

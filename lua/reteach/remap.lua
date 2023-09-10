@@ -14,7 +14,6 @@ vim.keymap.set("n", "<leader>pr", ":Fern . -reveal=%<enter>")
 
 --Terminal popup
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm direction=float<enter>")
-
 --Autocomplete remaps
 vim.keymap.set("n", "<leader>y", "<C>y")
 
@@ -22,6 +21,9 @@ vim.keymap.set("n", "<leader>y", "<C>y")
 --Trouble menu popup
 vim.keymap.set("n", "<leader>t", ":Trouble<enter>")
 vim.keymap.set("n", "<leader>T", ":TroubleClose<enter>")
+
+--Git blame toggle
+vim.keymap.set("n", "<leader>gb",":BlamerToggle<enter>")
 
 
 --Null Registers 
@@ -36,3 +38,6 @@ vim.cmd[[tnoremap <C-w>h <C-\><C-n><C-w>h]]
 vim.cmd[[tnoremap <C-w>l <C-\><C-n><C-w>l]]
 vim.cmd[[tnoremap <C-w>j <C-\><C-n><C-w>j]]
 vim.cmd[[tnoremap <C-w>k <C-\><C-n><C-w>k]]
+
+
+vim.keymap.set("n", "<leader>pwd", ":call setreg('+', expand('%'))<enter>")

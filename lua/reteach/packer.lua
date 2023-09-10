@@ -5,12 +5,14 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  use 'APZelos/blamer.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
 
       require("toggleterm").setup()
   end}
+  use "lukas-reineke/indent-blankline.nvim"
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use('folke/trouble.nvim')
@@ -19,9 +21,10 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  requires = { {'nvim-lua/plenary.nvim','sharkdp/fd'} }
   }
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use({ "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" })
   use({ 
 	  'rose-pine/neovim',
 	  as = 'rose-pine', 
