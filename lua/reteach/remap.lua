@@ -41,3 +41,4 @@ vim.cmd[[tnoremap <C-w>k <C-\><C-n><C-w>k]]
 
 
 vim.keymap.set("n", "<leader>pwd", ":call setreg('+', expand('%'))<enter>")
+vim.keymap.set("n", "<leader>v", "<c-v>")

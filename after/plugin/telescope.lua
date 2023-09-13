@@ -7,6 +7,9 @@ vim.keymap.set('n', '<leader>ps', function()
 	builtin.live_grep({ path_display = {"tail"} })
 end)
 
+vim.keymap.set('n', '<leader>p*', function()
+    builtin.grep_string({search = vim.fn.expand("<cword>")})
+end)
 
 local previewers = require('telescope.previewers')
 
