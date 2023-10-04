@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 
       require("toggleterm").setup()
   end}
+  use({"terrortylor/nvim-comment", config = function() require('nvim_comment').setup() end})
   use "lukas-reineke/indent-blankline.nvim"
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-web-devicons'
@@ -40,6 +41,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use{'lambdalisue/fern.vim'}
   use{'hrsh7th/cmp-cmdline'}
+  use{'dusans/vim-hardmode'}
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
